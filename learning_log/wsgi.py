@@ -13,8 +13,6 @@ from django.core.wsgi import get_wsgi_application
 from dj_static import Cling
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'learning_log.settings')
+
+# Use Cling to serve static files in production
 application = Cling(get_wsgi_application())
-
-application = get_wsgi_application()
-
-app = application
